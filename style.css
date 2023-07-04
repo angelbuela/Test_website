@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+/* Varibles created for the colors which are repeated */
+:root {
+  --price-text-color: #636363;
+  --lable-text-color: #949494;
+  --button-background-color: #32c1ff;
+}
+
+/* All the button have the same style */
+button {
+  height: 65px;
+  border-radius: 8px;
+  padding: 10px 30px;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: var(--button-background-color);
+  border: none;
+  color: #fff;
+}
+
+sup {
+  font-size: 18px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+input {
+  height: 40px;
+  border: 1px solid #ababab;
+}
+
+input:focus {
+  outline: none;
+}
+
+.fruit {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 19px;
+  align-self: stretch;
+  border: 1px solid #828282;
+}
+
+.fruit .title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.price-listing p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.price-listing .fruit-name {
+  font-size: 16px;
+  color: var(--lable-text-color);
+}
+
+.price-listing .price {
+  color: var(--price-text-color);
+  font-size: 36px;
+}
+
+.Deal_Alerts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex: 1 0 0;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.details p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.details span:nth-child(1) {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.details span:nth-child(2) {
+  font-size: 16px;
+  color: var(--lable-text-color);
+}
+
+.actions {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e2e2e2;
+}
+
+.actions .title {
+  font-size: 25px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
