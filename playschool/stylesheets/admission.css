@@ -1,0 +1,112 @@
+main {
+  /* height: 100vh; */
+  background-color: #eee;
+  padding: 15vh var(--pading);
+  overflow: hidden;
+  position: relative;
+}
+
+main .content {
+  position: relative;
+}
+main .content img {
+  position: absolute;
+  right: 0;
+  width: 30vw;
+  top: 0;
+}
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--pading);
+  gap: var(--margin);
+  width: 90%;
+  margin: auto;
+}
+
+#cards .card {
+  flex-basis: 30%;
+  flex-grow: 1;
+  width: 300px;
+  padding: var(--pading);
+  border: 1px solid #dcdae0;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#cards .card i {
+  font-size: 3rem;
+}
+
+#cards .card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  z-index: -1;
+  transition: 300ms ease-in-out;
+}
+
+#cards .card:hover::before {
+  background-color: #333;
+  transform: translate(2px, 2px);
+}
+
+#steps {
+  padding: 10vh;
+}
+
+#steps .content {
+  width: 600px;
+  margin: auto;
+}
+
+#steps .steps {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#steps .steps .step {
+  width: 300px;
+  aspect-ratio: 1;
+  padding: var(--pading);
+  /* aspect-ratio: 1/1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 300ms ease-in-out;
+}
+
+#steps .steps .step span {
+  width: 100px;
+  aspect-ratio: 1;
+  background-color: var(--clr);
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+  font-size: 3rem;
+  font-weight: bolder;
+  transition: 100ms ease-out;
+}
+
+#steps .steps .step:hover {
+  background-color: #eee;
+}
+#steps .steps .step:hover span {
+  transform: scale(1.15);
+  background-color: #333;
+}
+
+#steps .steps img {
+  width: 110px;
+}

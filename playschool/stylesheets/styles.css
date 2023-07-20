@@ -1,0 +1,265 @@
+#hero {
+  height: calc(100vh + 25px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  position: relative;
+}
+
+#hero main {
+  background-image: url(../assets/h-17.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: darken;
+}
+
+#hero main .content {
+  width: 55%;
+  aspect-ratio: 1.536/1;
+  /* height: 500px; */
+  background-image: url(../assets/hero-content.svg);
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero main .content img {
+  position: absolute;
+  bottom: 0;
+}
+
+#hero main .content .people {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  z-index: -1;
+}
+#hero main .content .dots {
+  bottom: 10%;
+}
+
+/*************************************************************************/
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: calc(2 * var(--margin));
+  padding: 10vh var(--pading);
+}
+
+#intro > .content {
+  width: 550px;
+}
+
+#intro .content h1 {
+  margin-bottom: 1rem;
+}
+
+#intro .slider img {
+  width: 400px;
+  height: 300px;
+  clip-path: url(#slider-path);
+  object-fit: cover;
+}
+
+#intro .slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10vw;
+  /* justify-content: space-between; */
+}
+
+#intro .slider-container .controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#intro .slider-container .controls li {
+  cursor: pointer;
+}
+
+#intro .slider-container .controls li .bullet {
+  --width: 30px;
+  width: var(--width);
+  aspect-ratio: 1;
+  text-align: center;
+  line-height: var(--width);
+  margin-right: 0.5rem;
+}
+
+#intro .slider-container .controls li .bullet.active {
+  background-color: red;
+  color: white;
+  clip-path: url(#bullet-path);
+}
+
+.blink {
+  animation: blink 1s;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#intro .slider-container .images {
+  display: flex;
+  align-items: flex-end;
+  gap: var(0.5 * var(--margin));
+}
+#intro .slider-container .images .learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+#intro .slider-container .images .learn-more button {
+  padding: 0.75rem;
+}
+
+#intro .slider-container .images .tree {
+  width: 100px;
+}
+
+/*****************************************/
+
+/*************************************************************/
+
+#look-around {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  background-image: url(../assets/path.svg);
+  background-size: 90%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0 10vh 10vh;
+}
+
+#look-around .image img {
+  position: absolute;
+  bottom: 0;
+}
+
+#look-around .image .leaf-1 {
+  left: 10vw;
+  bottom: 6.5vw;
+}
+
+#look-around .image .leaf-2 {
+  left: 15vw;
+}
+
+#look-around .image .person {
+  left: 20vw;
+}
+
+#look-around .image .tree {
+  right: 10vw;
+}
+
+#look-around .content p {
+  margin: 1rem 0;
+}
+
+#look-around .image .props {
+  position: absolute;
+  bottom: var(--y);
+}
+
+/*************************************************************/
+
+#contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  padding: 10vh;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  line-height: 1.5;
+  margin-top: var(--margin);
+}
+
+#testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  padding: 10vh;
+}
+
+#testimonials .tv,
+#testimonials > img {
+  align-self: flex-end;
+}
+
+#testimonials .content {
+  width: 400px;
+}
+#testimonials .heading {
+  position: initial;
+  line-height: 1.25;
+}
+
+#testimonials .content p {
+  margin: 1.25rem 0;
+}
+
+#actions {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  padding: 5vw;
+}
+
+#actions .action-card {
+  border: 1px solid #dcdae0;
+  padding: 2rem;
+  width: 250px;
+  position: relative;
+  background-color: #fff;
+}
+
+#actions .action-card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  z-index: -1;
+  transition: 300ms ease-in-out;
+}
+
+#actions .action-card:hover::before {
+  background-color: #333;
+  transform: translate(2px, 2px);
+}
+
+#actions .action-card i {
+  font-size: 3rem;
+}
+
+#actions .action-card h3 {
+  margin: 1rem 0;
+}

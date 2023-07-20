@@ -1,0 +1,27 @@
+main {
+  /* height: 100vh; */
+  background-color: #eee;
+  padding: 15vh var(--pading);
+  overflow: hidden;
+  position: relative;
+}
+
+main .content {
+  position: relative;
+}
+main .content img {
+  position: absolute;
+  right: 0;
+  width: 30vw;
+  top: 0;
+}
+
+#history {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10vh var(--pading);
+}
+
+#history p {
+  margin: 1rem 0;
+}
